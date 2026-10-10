@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Beranda</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS untuk merapikan tampilan berbasis tabel asli -->
+    <style>
+        body {
+            background-color: darkgrey;
+            background-image: url('images/background.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Memperindah tabel utama */
+        table {
+            border-collapse: collapse;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling tautan dan teks */
+        a {
+            color: #0000EE;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigasi */
+        tr td[bgcolor="pink"] a {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Konten utama */
+        h3 {
+            color: #333;
+            margin-top: 0;
+        }
+    </style>
 </head>
 
 <body bgcolor="darkgrey" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
     <p>&nbsp;</p>
     <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
         <tr>
@@ -30,10 +71,9 @@
         <tr>
             <td width="75%">
                 <!-- Content utama -->
-
                 <h3>Tingkatkan Kesadaran Komunitas Sekolah, SMKN 1 Tangerang Gelar Cek Kesehatan Gratis</h3>
                 <p align="right"><small><em>Senin, 7 September 2026</em></small></p>
-                <p>Guna memastikan kondisi fisik yang prima dalam mendukung kegiatan belajar mengajar, SMKN 1 Tangerang (Nesta) bekerja sama dengan Puskesmas setempat menyelenggarakan program Cek Kesehatan Gratis. Kegiatan yang menyasar seluruh siswa, guru, serta tenaga kependidikan ini berlangsung tertib di lingkungan sekolah.Program ini merupakan bagian dari gerakan skrining kesehatan massal yang dicanangkan oleh Kementerian Kesehatan Republik Indonesia. Tujuannya adalah mendeteksi dini potensi penyakit tidak menular (PTM) serta memantau kebugaran warga sekolah secara berkala.</p>
+                <p>Guna memastikan kondisi fisik yang prima dalam mendukung kegiatan belajar mengajar, SMKN 1 Tangerang (Nesta) bekerja sama dengan Puskesmas setempat menyelenggarakan program Cek Kesehatan Gratis. Kegiatan yang menyasar seluruh siswa, guru, serta tenaga kependidikan ini berlangsung tertib di lingkungan sekolah. Program ini merupakan bagian dari gerakan skrining kesehatan massal yang dicanangkan oleh Kementerian Kesehatan Republik Indonesia. Tujuannya adalah mendeteksi dini potensi penyakit tidak menular (PTM) serta memantau kebugaran warga sekolah secara berkala.</p>
                 <p><a href="Berita1.html">Selanjutnya</a></p>
 
                 <hr>
@@ -42,11 +82,10 @@
                 <p align="right"><small><em>Jumat, 4 September 2026</em></small></p>
                 <p>SMKN 1 Tangerang (Nesta) menerima kunjungan tim Irjen Kemendikdasmen untuk memantau realisasi Program Digitalisasi Pembelajaran 2026. Sekolah berkomitmen mengoptimalkan teknologi demi menciptakan metode KBM yang lebih bermakna dan siap industri bagi Sobat Nesta.</p>
                 <p><a href="Berita2.html">Selanjutnya</a></p>
-
                 <!-- Akhir dari content utama -->
             </td>
             <td width="25%" valign="top" bgcolor="pink">
-                <p>Tautan eksternal</p>
+                <p><strong>Tautan eksternal</strong></p>
                 <ol>
                     <li><a href="https://bilqisn340-star.github.io/">Website Bilqis</a></li>
                     <li><a href="https://www.github.com">Github</a></li>
@@ -63,5 +102,4 @@
     </table>
     <p>&nbsp;</p>
 </body>
-
 </html>
