@@ -6,45 +6,221 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <!-- CSS untuk merapikan tampilan berbasis tabel asli -->
-    <style>
-        body {
-            background-color: darkgrey;
-            background-image: url('images/background.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Memperindah tabel utama */
+    
+<style>
+    /* Tampilan dasar halaman */
+    body {
+        background-color: #dbeafe;
+        background-image: url('images/background.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #1e293b;
+        line-height: 1.7;
+    }
+
+    /* Tabel utama */
+    table {
+        border-collapse: collapse;
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(15, 55, 100, 0.2);
+        background-color: #ffffff;
+    }
+
+    /* Sel tabel */
+    td {
+        border-color: #dbeafe;
+        padding: 15px;
+    }
+
+    /* Header website */
+    tr:first-child td {
+        background: linear-gradient(135deg, #0f172a, #1d4ed8, #38bdf8) !important;
+        color: #ffffff;
+        padding: 25px 15px;
+    }
+
+    tr:first-child h1 {
+        font-size: 36px;
+        letter-spacing: 2px;
+        margin: 10px 0;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    tr:first-child p {
+        color: #e0f2fe;
+    }
+
+    /* Navigasi menu */
+    tr:nth-child(2) td {
+        background-color: #dbeafe !important;
+        padding: 14px 18px;
+        border-bottom: 3px solid #3b82f6;
+    }
+
+    tr:nth-child(2) a {
+        display: inline-block;
+        color: #1d4ed8;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 3px 5px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    tr:nth-child(2) a:hover {
+        background-color: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    /* Konten berita utama */
+    tr:nth-child(3) td:first-child {
+        background-color: #ffffff;
+        padding: 25px;
+        vertical-align: top;
+    }
+
+    h3 {
+        color: #1d4ed8;
+        font-size: 21px;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 12px;
+        border-left: 5px solid #38bdf8;
+        padding-left: 12px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* Tanggal berita */
+    small {
+        color: #64748b;
+        font-size: 12px;
+    }
+
+    /* Semua tautan */
+    a {
+        color: #2563eb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #0f172a;
+        text-decoration: underline;
+    }
+
+    /* Tombol Selanjutnya */
+    tr:nth-child(3) td:first-child p a {
+        display: inline-block;
+        background: linear-gradient(135deg, #2563eb, #0ea5e9);
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 3px 8px rgba(37, 99, 235, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    tr:nth-child(3) td:first-child p a:hover {
+        background: linear-gradient(135deg, #1e40af, #0284c7);
+        transform: translateY(-2px);
+        text-decoration: none;
+        box-shadow: 0 5px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Garis pemisah berita */
+    hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, #93c5fd, #e0f2fe);
+        margin: 25px 0;
+    }
+
+    /* Sidebar tautan eksternal */
+    tr:nth-child(3) td:last-child {
+        background-color: #eff6ff !important;
+        vertical-align: top;
+        padding: 20px;
+        border-left: 1px solid #dbeafe;
+    }
+
+    tr:nth-child(3) td:last-child strong {
+        display: block;
+        color: #1e40af;
+        font-size: 16px;
+        border-bottom: 2px solid #60a5fa;
+        padding-bottom: 8px;
+    }
+
+    tr:nth-child(3) td:last-child ol {
+        padding-left: 22px;
+    }
+
+    tr:nth-child(3) td:last-child li {
+        margin-bottom: 12px;
+        color: #3b82f6;
+    }
+
+    tr:nth-child(3) td:last-child a {
+        color: #1d4ed8;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    tr:nth-child(3) td:last-child a:hover {
+        color: #0284c7;
+        text-decoration: underline;
+    }
+
+    /* Footer website */
+    tr:last-child td {
+        background-color: #1e3a8a !important;
+        padding: 15px;
+        border-top: 3px solid #60a5fa;
+    }
+
+    tr:last-child td,
+    tr:last-child td small {
+        color: #ffffff;
+    }
+
+    /* Tampilan layar kecil */
+    @media screen and (max-width: 850px) {
         table {
-            border-collapse: collapse;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 95% !important;
         }
 
-        /* Styling tautan dan teks */
-        a {
-            color: #0000EE;
-            text-decoration: none;
+        tr:nth-child(3) td:first-child {
+            padding: 15px;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Navigasi */
-        tr td[bgcolor="pink"] a {
-            font-weight: bold;
-            margin-right: 5px;
-        }
-
-        /* Konten utama */
         h3 {
-            color: #333;
-            margin-top: 0;
+            font-size: 18px;
         }
-    </style>
+
+        tr:first-child h1 {
+            font-size: 28px;
+        }
+    }
+
+    /* Efek transisi yang halus */
+    * {
+        box-sizing: border-box;
+    }
+</style>
+
 </head>
 
 <body bgcolor="darkgrey" background="images/background.svg">
